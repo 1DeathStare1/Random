@@ -10,5 +10,5 @@ spawn(function()
 end)
 
 spawn(function()
-    loadstring(game:HttpGet(""))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1DeathStare1/Random/refs/heads/main/Rgui.lua"))()
 end)
